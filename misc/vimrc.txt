@@ -15,6 +15,8 @@ Plugin 'gmarik/Vundle.vim'
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'terryma/vim-multiple-cursors'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -29,6 +31,19 @@ map <C-n> :NERDTreeToggle<CR>
 " selec the text. Then cmd-c and cmd-v work as expected.
 set mouse=a
 
+" turn off autoindent when you paste code
+set paste
+
+" set tab characters that appear 4-spaces-wide
+set tabstop=4
+
+" make backspace key work in insert mode
+set backspace=indent,eol,start
+
+" turn on search highlighting
+set hlsearch
+
+
 "split navigations
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -38,5 +53,10 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <C-P> :CtrlPMixed<cr>
 
 " Might need to run 'sudo apt-get install vim-gui-common' first
-vmap <C-c> "+yi
+vmap <C-x> "+yi
 
+" Default mapping
+let g:multi_cursor_next_key='<C-j>'
+let g:multi_cursor_prev_key='<C-k>'
+let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<Esc>'
