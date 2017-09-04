@@ -8,15 +8,14 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-" Plugin 'Valloric/YouCompleteMe'
+""" let Vundle manage Vundle, required
+" Please don't use PluginInstall to install 'YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 
-" Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
+Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'terryma/vim-multiple-cursors'
+""" end
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -24,39 +23,35 @@ filetype plugin indent on    " required
 
 """ NERDTree 
 "autocmd vimenter * NERDTree
-map <C-n> :NERDTreeToggle<CR>
+map <F2> :NERDTreeToggle<CR>
 
-""" Vim
+""""""""""""""""""""""""""""" Vim """""""""""""""""""""""""""""
 " [Tip] For OS X users: To copy paste with mouse=a use alt instead of Shift to
 " selec the text. Then cmd-c and cmd-v work as expected.
 set mouse=a
-
-" turn off autoindent when you paste code
+" Turn off autoindent when you paste code
 set paste
-
-" set tab characters that appear 4-spaces-wide
-set tabstop=4
-
+" Set tab characters that appear 4-spaces-wide
+set tabstop=4   
 " make backspace key work in insert mode
 set backspace=indent,eol,start
 
-" turn on search highlighting
-set hlsearch
-
-
-"split navigations
+""" Split navigations
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+""" Bind vim navigation keys to switching between tabs
+" Moves to the next tab
+map <C-l> :tabn<CR>
+" Moves to the previous tab
+map <C-h> :tabp<CR>
+" Moves to the next tab
+map <C-n> :tabnew<CR>
+
+"""""""""""""""""""""""""""""" CtrlPMixed """""""""""""""""""""""""""""
 nnoremap <C-P> :CtrlPMixed<cr>
 
 " Might need to run 'sudo apt-get install vim-gui-common' first
-vmap <C-x> "+yi
-
-" Default mapping
-let g:multi_cursor_next_key='<C-j>'
-let g:multi_cursor_prev_key='<C-k>'
-let g:multi_cursor_skip_key='<C-x>'
-let g:multi_cursor_quit_key='<Esc>'
+vmap <C-c> "+yi
