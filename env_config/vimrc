@@ -55,3 +55,4 @@ nnoremap <C-P> :CtrlPMixed<cr>
 
 " Might need to run 'sudo apt-get install vim-gui-common' first
 vmap <C-c> "+yi
+set encoding=utf-8
