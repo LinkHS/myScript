@@ -1,0 +1,1 @@
+In this tutorial, we focus on how to feed data into a training or inference program. Most training and inference modules in MXNet accept data iterators, which simplifies this procedure, especially when reading large datasets. Here we discuss the API conventions and several provided iterators.

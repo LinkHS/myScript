@@ -8,16 +8,7 @@ ctx = [gpu(0), gpu(1), gpu(2), gpu(3)]
 print("multi-gpu:", ctx)
 ```
 
-```{.json .output n=1}
-[
- {
-  "name": "stdout",
-  "output_type": "stream",
-  "text": "one gpu: gpu(0)\nmulti-gpu: [gpu(0), gpu(1), gpu(2), gpu(3)]\n"
- }
-]
-```
-
+---
 # MultiBoxPrior
 [x_left, y_up, x_right, y_down]
 
@@ -50,12 +41,35 @@ print("y4", y)
 #print y
 ```
 
-```{.json .output n=3}
-[
- {
-  "name": "stdout",
-  "output_type": "stream",
-  "text": "y1 \n[[[-0.25 -0.25  0.75  0.75]\n  [ 0.25 -0.25  1.25  0.75]\n  [-0.25  0.25  0.75  1.25]\n  [ 0.25  0.25  1.25  1.25]]]\n<NDArray 1x4x4 @cpu(0)>\ny2 \n[[[-0.25 -0.25  0.75  0.75]\n  [ 0.    0.    0.5   0.5 ]\n  [ 0.25 -0.25  1.25  0.75]\n  [ 0.5   0.    1.    0.5 ]\n  [-0.25  0.25  0.75  1.25]\n  [ 0.    0.5   0.5   1.  ]\n  [ 0.25  0.25  1.25  1.25]\n  [ 0.5   0.5   1.    1.  ]]]\n<NDArray 1x8x4 @cpu(0)>\ny3 \n[[[ 0.          0.          0.5         0.5       ]\n  [ 0.0263932  -0.0295085   0.4736068   0.52950847]\n  [ 0.5         0.          1.          0.5       ]\n  [ 0.52639318 -0.0295085   0.97360682  0.52950847]\n  [ 0.          0.5         0.5         1.        ]\n  [ 0.0263932   0.4704915   0.4736068   1.02950847]\n  [ 0.5         0.5         1.          1.        ]\n  [ 0.52639318  0.4704915   0.97360682  1.02950847]]]\n<NDArray 1x8x4 @cpu(0)>\ny4 \n[[[ 0.   0.   0.5  0.5]\n  [ 0.5  0.   1.   0.5]\n  [ 0.   0.5  0.5  1. ]\n  [ 0.5  0.5  1.   1. ]]]\n<NDArray 1x4x4 @cpu(0)>\n"
- }
-]
+---
+# Visualization module
+
+```{.python .input}
+import mxnet as mx
+```
+
+## Example1, FC
+
+```{.python .input}
+net = mx.sym.Variable('data')
+net = mx.sym.FullyConnected(data=net, name='fc1', num_hidden=128)
+mx.viz.plot_network(net, shape={'data':(100,100)})
+```
+
+## Example2, Conv
+
+```{.python .input}
+net = mx.sym.Variable('data')
+net = mx.sym.Convolution(net, kernel=(3,3), stride=(1,1), num_filter=10)
+mx.viz.plot_network(net, shape={'data':(10000,3,32,32)})
+```
+
+## Example3, Save to file
+
+```{.python .input}
+net = mx.sym.Variable('data')
+net = mx.sym.Convolution(net, kernel=(3,3), stride=(1,1), num_filter=10)
+
+digraph = mx.viz.plot_network(net, save_format = 'jpg') # jpg, png, pdf
+digraph.render()
 ```
