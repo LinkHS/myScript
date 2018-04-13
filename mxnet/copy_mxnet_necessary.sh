@@ -1,5 +1,5 @@
 set -x
-SOURCE_PATH=/home/austin/work/hobot-mxnet
+SOURCE_PATH=$1
 
 rm -rf bin
 rm -rf deps
