@@ -22,6 +22,12 @@ wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - 
 ## Change your shell to zsh and Login again your terminal
 chsh -s `which zsh`
 
+
+# pip
+mkdir ~/.pip
+cp pip.conf ~/.pip/pip.conf
+
+
 ## Plugins
 git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
