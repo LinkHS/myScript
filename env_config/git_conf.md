@@ -14,3 +14,10 @@ git config --global alias.br  branch
 
 git config --global core.editor `which vim`
 ```
+
+---
+## 常用开源项目地址
+- git@github.com:opencv/opencv.git
+- git@github.com:apache/incubator-mxnet.git 
+- git@github.com:LinkHS/MyPython.git
+- git@github.com:LinkHS/myScript.git
