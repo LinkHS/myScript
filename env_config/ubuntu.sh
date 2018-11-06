@@ -21,7 +21,7 @@ wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - 
 
 ## Change your shell to zsh and Login again your terminal
 chsh -s `which zsh`
-
+zsh
 
 # pip
 mkdir ~/.pip
