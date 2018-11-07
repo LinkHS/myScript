@@ -1,0 +1,8 @@
+{
+  "server":"hk1-sta101.ssssa.space",
+  "server_port":31498,
+  "local_port":1080,
+  "password":"dgkTnNkhL8QxkrX",
+  "timeout":600,
+  "method":"chacha20-ietf-poly1305"
+}
