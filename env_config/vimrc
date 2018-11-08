@@ -19,6 +19,8 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'tell-k/vim-autopep8'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'kannokanno/previm' " cmd: PrevimOpen 
+Plugin 'tyru/open-browser.vim'
 """ end
 
 " All of your Plugins must be added before the following line

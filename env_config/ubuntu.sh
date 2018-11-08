@@ -42,6 +42,30 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
 
+# --- VPN ---
+cp ss.vpn_config ~/
+
+```
+# method 1
+pip install git+https://github.com/shadowsocks/shadowsocks.git@master
+sslocal -c ss.vpn_config
+
+# method 2
+sudo apt-get install software-properties-common -y 
+sudo add-apt-repository ppa:max-c-lv/shadowsocks-libev -y 
+sudo apt-get update 
+sudo apt install shadowsocks-libev 
+
+ss-local -c ss.vpn_config
+```
+
+# --- Tmux ---
+mkdir ~/.tmux
+cp tmux.conf ~/.tmux.conf
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+
+
 # --- Develop ---
 sudo apt-get install -y build-essential
 sudo apt-get install -y python-dev python3-dev
