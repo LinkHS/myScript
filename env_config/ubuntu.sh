@@ -17,16 +17,15 @@ sudo apt-get install -y zsh
 sudo apt-get install -y git-core
 
 ## Install
-wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
+#wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
 
 ## Change your shell to zsh and Login again your terminal
-chsh -s `which zsh`
-zsh
+chsh -s `which zsh` # might need to reboot
 
 # pip
 mkdir ~/.pip
 cp pip.conf ~/.pip/pip.conf
-
+sudo apt-get install python-pip
 
 ## Plugins
 git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
@@ -45,19 +44,19 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 # --- VPN ---
 cp ss.vpn_config ~/
 
-```
-# method 1
+## method 1
 pip install git+https://github.com/shadowsocks/shadowsocks.git@master
-sslocal -c ss.vpn_config
+sudo apt install libsodium-dev
+#`sslocal -c ss.vpn_config`
 
-# method 2
-sudo apt-get install software-properties-common -y 
-sudo add-apt-repository ppa:max-c-lv/shadowsocks-libev -y 
-sudo apt-get update 
-sudo apt install shadowsocks-libev 
+## method 2
+#sudo apt-get install software-properties-common -y 
+#sudo add-apt-repository ppa:max-c-lv/shadowsocks-libev -y 
+#sudo apt-get update 
+#sudo apt install shadowsocks-libev 
+#
+#ss-local -c ss.vpn_config
 
-ss-local -c ss.vpn_config
-```
 
 # --- Tmux ---
 mkdir ~/.tmux
