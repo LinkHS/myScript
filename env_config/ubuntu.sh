@@ -6,9 +6,22 @@ sudo apt-get install -y tig tmux htop tree
 
 # --- vim ---
 sudo apt-get install -y vim
+cp vimrc ~/.vimrc
 
 ## Plugins：
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+
+# --- pip ---
+mkdir ~/.pip
+cp pip.conf ~/.pip/pip.conf
+sudo apt-get install python-pip
+
+
+# --- fonts ---
+# Note: cp *.ttc ~/usr/share/fonts
+
+sudo apt-get install unity-tweak-tool
 
 
 # --- zsh ---
@@ -17,15 +30,10 @@ sudo apt-get install -y zsh
 sudo apt-get install -y git-core
 
 ## Install
-#wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
+wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
 
 ## Change your shell to zsh and Login again your terminal
 chsh -s `which zsh` # might need to reboot
-
-# pip
-mkdir ~/.pip
-cp pip.conf ~/.pip/pip.conf
-sudo apt-get install python-pip
 
 ## Plugins
 git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
@@ -63,6 +71,11 @@ mkdir ~/.tmux
 cp tmux.conf ~/.tmux.conf
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
+
+# --- TLP 电源管理
+sudo add-apt-repository ppa:linrunner/tlp
+sudo apt-get update
+sudo apt-get install tlp tlp-rdw
 
 
 # --- Develop ---
