@@ -82,6 +82,17 @@ sudo apt-get install tlp tlp-rdw
 sudo apt install exfat-fuse exfat-utils
 
 
+# --- Gestures ---
+sudo gpasswd -a $USER input
+sudo apt-get install libinput-tools
+sudo apt-get install xdotool
+sudo apt-get install ruby
+gem install fusuma
+mkdir -p ~/.config/fusuma  
+mv fusuma_config.yml ~/.config/fusuma/config.yml
+# run "sudo fusuma &" or "add fusuma to Startup Applications"
+
+
 # --- Develop ---
 sudo apt-get install -y build-essential
 sudo apt-get install -y python-dev python3-dev
@@ -89,4 +100,10 @@ sudo apt-get install -y openblas
 sudo apt-get install -y ctags cscope
 
 sudo apt-get install -y libeigen3-dev
+
+
+# --- Notes ---
+echo 'add fusuma to Startup Applications'
+
+
 
