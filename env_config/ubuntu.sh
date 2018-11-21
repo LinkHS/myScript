@@ -78,6 +78,10 @@ sudo apt-get update
 sudo apt-get install tlp tlp-rdw
 
 
+# --- exfat ---
+sudo apt install exfat-fuse exfat-utils
+
+
 # --- Develop ---
 sudo apt-get install -y build-essential
 sudo apt-get install -y python-dev python3-dev
