@@ -19,7 +19,7 @@ sudo apt-get install python-pip
 
 
 # --- fonts ---
-# Note: cp *.ttc ~/usr/share/fonts
+# Note: cp *.ttc /usr/share/fonts
 
 sudo apt-get install unity-tweak-tool
 
