@@ -1,5 +1,17 @@
 
 ---
+## Install
+```
+pip install jupyter notebook
+pip install autopep8
+
+# 以下只需要在 base 中设置一次就好了
+pip install jupyter_nbextensions_configurator jupyter_contrib_nbextensions
+jupyter contrib nbextension install --user
+jupyter nbextensions_configurator enable --user
+```
+
+---
 ## jupyter notebook 的27个小技巧
 https://blog.csdn.net/u013084616/article/details/79126585
 

@@ -59,4 +59,7 @@ conda search '*opencv*'
 ---
 配置
 
-`conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/`
+```
+conda config --prepend channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/        
+#conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+```
