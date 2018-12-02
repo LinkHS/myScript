@@ -1,8 +1,8 @@
 {
-  "server":"hk1-sta101.ssssa.space",
-  "server_port":31498,
+  "server":"104.238.190.225",
+  "server_port":4660,
   "local_port":1080,
-  "password":"dgkTnNkhL8QxkrX",
+  "password":"1qaz@WSX",
   "timeout":600,
-  "method":"chacha20-ietf-poly1305"
+  "method":"aes-256-cfb"
 }
