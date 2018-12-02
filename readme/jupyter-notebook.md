@@ -1,4 +1,13 @@
 
+
+---
+## matplotlib/opencv 显示
+```
+%matplotlib qt # for cv2.imshow()
+
+%matplotlib inline # for pyplot.show()
+```
+
 ---
 ## Install
 ```
