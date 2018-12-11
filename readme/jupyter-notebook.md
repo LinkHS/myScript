@@ -1,4 +1,37 @@
 
+---
+## autoreload
+https://ipython.readthedocs.io/en/stable/config/extensions/autoreload.html
+
+IPython extension to reload modules before executing user code.
+
+autoreload reloads modules automatically before entering the execution of code typed at the IPython prompt.
+
+`autoreload 0/1/2` 说明
+- 0, Disable automatic reloading
+- 1, Reload all modules imported with %aimport every time before executing the Python code typed.
+- 2, Reload all modules (except those excluded by %aimport) every time before executing the Python code typed.
+
+
+```
+%reload_ext autoreload
+%aimport myPackage # 这样修改 myPackage 的代码后就不需要重启 kernel 了
+%autoreload 1
+
+---
+## Embedded Video 插入视频
+代码框形式，需要运行后才显示
+```
+from IPython.display import HTML
+HTML("""
+html code
+""")
+```
+
+markdown形式
+```
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://youtu.be/siAMDK8C_x8)
+```
 
 ---
 ## matplotlib/opencv 显示
