@@ -22,3 +22,43 @@ $ cat x86_64-linux-gnu_GL.conf
 sudo cp x86_64-linux-gnu_GL.conf  i386-linux-gnu_GL.conf
 sudo ldconfig
 ```
+
+
+
+---
+
+## Anki
+
+### ankidroid 显示 mathjax
+
+https://apps.ankiweb.net/docs/manual.html#mathjax-support
+
+https://www.reddit.com/r/Anki/comments/ar7lxd/how_to_load_mathjax_color_extension_on_anki/egm6u5j/
+
+```
+<script type="text/x-mathjax-config">
+    MathJax.Hub.processSectionDelay = 0;
+    MathJax.Hub.Config({
+        messageStyle:"none",
+        showProcessingMessages:false,
+        tex2jax:{
+            inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+            displayMath: [ ['$$','$$'], ['\\[','\\]'] ],
+            processEscapes:true
+        }
+});
+</script>
+<script type="text/javascript">
+(function() {
+  if (window.MathJax != null) {
+    var card = document.querySelector('.card');
+    MathJax.Hub.Queue(['Typeset', MathJax.Hub, card]);
+    return;
+  }
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_SVG-full';
+  document.body.appendChild(script);
+})();
+</script>
+```
