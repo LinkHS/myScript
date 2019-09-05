@@ -93,12 +93,18 @@ mv fusuma_config.yml ~/.config/fusuma/config.yml
 # run "sudo fusuma &" or "add fusuma to Startup Applications"
 
 
-
-# ---cgroup 限制内存
+# --- cgroup 限制内存
 sudo apt-get install cgroup-bin cgroup-lite cgroup-tools cgroupfs-mount libcgroup1
 sudo cp cgrule.conf /etc/
 sudo cp cgconfig.conf /etc/
 # Add `cgconfigparser -l /etc/cgconfig.conf` and `cgrulesengd` into /etc/rc.local
+
+
+# --- sysmonitor 资源监视 ---
+sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor
+sudo apt-get update
+sudo apt-get install indicator-sysmonitor  
+
 
 # --- Develop ---
 sudo apt-get install -y build-essential
