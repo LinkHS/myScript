@@ -47,6 +47,16 @@ export https_proxy=http://<username>:<password>@10.191.131.3:3128
 ```
 
 ---
+## 查看GPU状态
+``` shell
+pip install gpustat
+
+gpustat -cpu
+# or
+watch --color -n 1 gpustat -cpu
+```
+
+---
 
 # DeepLearning
 
@@ -55,4 +65,3 @@ export https_proxy=http://<username>:<password>@10.191.131.3:3128
 ```shell
 tensorboard --logdir name1:/path/to/logs/1,name2:/path/to/logs/2
 ```
-

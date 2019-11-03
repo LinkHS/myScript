@@ -1,3 +1,4 @@
+```shell
 export HADOOP_PREFIX=/usr/local/hadoop-2.7.2
 export HADOOP_HOME=/usr/local/hadoop-2.7.2
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
@@ -9,3 +10,5 @@ export LD_LIBRARY_PATH=$CUDA_PATH/lib64:$LD_LIBRARY_PATH
 export PATH=$PATH:$HADOOP_HOME/bin:$CUDA_PATH/bin
 
 export HADOOP_USER_NAME=dawei.yang
+```
+

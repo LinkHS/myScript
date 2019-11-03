@@ -92,3 +92,10 @@ conda install numpy -c https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
 conda search *opencv*
 conda search '*opencv*'
 ```
+
+
+##
+[https://docs.anaconda.com/anaconda/user-guide/tasks/gpu-packages/](Working with GPU packages)
+```
+conda install numba cudatoolkit=8.0
+```

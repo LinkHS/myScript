@@ -1,3 +1,18 @@
+## Install
+
+```
+pip install jupyter notebook
+
+pip install jupyter_contrib_nbextensions
+pip install jupytext
+pip install nbdime
+pip install autopep8
+pip install jupyter_nbextensions_configurator jupyter_contrib_nbextensions
+
+# 以下只需要在 base 中设置一次就好了
+jupyter contrib nbextension install --user
+jupyter nbextensions_configurator enable --user
+```
 
 ## Viewing all defined variables
 
@@ -69,18 +84,6 @@ markdown形式
 ```
 
 ---
-## Install
-```
-pip install jupyter notebook
-pip install autopep8
-
-# 以下只需要在 base 中设置一次就好了
-pip install jupyter_nbextensions_configurator jupyter_contrib_nbextensions
-jupyter contrib nbextension install --user
-jupyter nbextensions_configurator enable --user
-```
-
----
 ## jupyter notebook 的27个小技巧
 https://blog.csdn.net/u013084616/article/details/79126585
 
@@ -93,13 +96,32 @@ https://blog.csdn.net/u013084616/article/details/79126585
 
 - `Esc + o`
 
-
 ---
 ## Clear defined variables
 - `%reset`
 - `%reset -f`  
 cleared all the variables and contents without prompt. `-f` does the force action on the given command without prompting for yes/no.
 
+---
+# 插件
+## 创建配置文件
+
+```shell
+jupyter notebook --generate-config
+```
+
+---
+## Jupytext
+```shell
+pip install jupytext
+```
+
+在" ~/.jupyter/jupyter_notebook_config.py" 添加:
+```shell
+c.NotebookApp.contents_manager_class="jupytext.TextFileContentsManager"
+```
+
+有了这个插件后可以直接在jupyter notebook中打开"py"、"md"文件运行
 
 ---
 ## nbdime
