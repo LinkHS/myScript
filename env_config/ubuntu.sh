@@ -53,8 +53,8 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 cp ss.vpn_config ~/
 
 ## method 1
-pip install git+https://github.com/shadowsocks/shadowsocks.git@master
-sudo apt install libsodium-dev
+# pip install git+https://github.com/shadowsocks/shadowsocks.git@master
+# sudo apt install libsodium-dev
 #`sslocal -c ss.vpn_config`
 
 ## method 2
@@ -117,6 +117,3 @@ sudo apt-get install -y libeigen3-dev
 
 # --- Notes ---
 echo 'add fusuma to Startup Applications'
-
-
-

@@ -1,4 +1,6 @@
 *.swp
-.ipynb_checkpoints
+.ipynb_checkpoints/
+.history/
+
 mxnet/Tutorials/Basic/101_ObjectCategories.tar.gz
 mxnet/Tutorials/Basic/data
