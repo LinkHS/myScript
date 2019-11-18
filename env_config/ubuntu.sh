@@ -106,6 +106,10 @@ sudo apt-get update
 sudo apt-get install indicator-sysmonitor  
 
 
+# --- 软件管理 ---
+sudo apt-get install synaptic
+
+
 # --- Develop ---
 sudo apt-get install -y build-essential
 sudo apt-get install -y python-dev python3-dev
@@ -114,6 +118,7 @@ sudo apt-get install -y ctags cscope
 
 sudo apt-get install -y libeigen3-dev
 
+ssh-keygen -t rsa -C "381082014@qq.com"
 
 # --- Notes ---
 echo 'add fusuma to Startup Applications'
