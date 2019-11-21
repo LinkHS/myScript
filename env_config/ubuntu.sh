@@ -1,11 +1,10 @@
-#
-sudo apt-get install -y git
-sudo apt-get install -y cmake
-sudo apt-get install -y tig tmux htop tree
+# --- essential ---
+ssh-keygen -t rsa -C "381082014@qq.com"
+sudo apt-get install -y vim git tmux htop 
+sudo apt-get install -y tig cmake tree
 
 
 # --- vim ---
-sudo apt-get install -y vim
 cp vimrc ~/.vimrc
 
 ## Plugins：
@@ -117,8 +116,6 @@ sudo apt-get install -y openblas
 sudo apt-get install -y ctags cscope
 
 sudo apt-get install -y libeigen3-dev
-
-ssh-keygen -t rsa -C "381082014@qq.com"
 
 # --- Notes ---
 echo 'add fusuma to Startup Applications'
