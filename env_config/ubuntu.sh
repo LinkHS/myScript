@@ -40,7 +40,7 @@ git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # Note: 在'~/.zshrc' 中添加以下内容
-# Note: plugins = ( [plugins...] zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting)
+# Note: plugins=(git zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting)
 
 
 # --- fzf ---

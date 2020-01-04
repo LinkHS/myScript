@@ -13,6 +13,13 @@ wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - 
 zsh
 
 
+# -- Develop ---
+## --- Latex ---
+sudo apt install texlive-full
+sudo apt install texlive-xetex
+sudo apt install texlive-lang-chinese
+
+
 # --- Configuration ---
 ## --- vim ---
 cp vimrc ~/.vimrc

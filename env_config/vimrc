@@ -11,7 +11,7 @@ call vundle#begin()
 
 """ let Vundle manage Vundle, required
 " Please don't use PluginInstall to install 'YouCompleteMe'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'

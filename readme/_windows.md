@@ -6,7 +6,19 @@
 
 在”偏好设置“里找到”历史记录“，选中”启动时打开上次会话“ 
 
+---
 
+## Totalcmd
+
+### 添加快速启动程序-日历
+
+```
+Command: outlookcal:
+
+Icon file: "C:\Program Files\Microsoft Office\root\vfs\Windows\Installer\{90160000-000F-0000-1000-0000000FF1CE}\outicon.exe"
+```
+
+---
 
 # 其他
 
@@ -32,3 +44,10 @@ route -p add 10.141.221.0 mask 255.255.255.0 10.222.128.1 metric 1
 ```powershell
 route delete 10.141.221.154
 ```
+
+---
+
+## 任务栏某个应用程序图标变白
+
+1. 同时按下快捷键`Win+R`，在打开的运行窗口中输入`%localappdata%`，回车
+2. 在打开的文件夹中，找到隐藏的`Iconcache.db`，将其删除

@@ -1,11 +1,11 @@
 ## Install
 
-```
+```shell
 pip install jupyter notebook
 
 pip install jupyter_contrib_nbextensions
 pip install jupytext
-pip install nbdime
+#pip install nbdime
 pip install autopep8
 pip install jupyter_nbextensions_configurator jupyter_contrib_nbextensions
 

@@ -43,9 +43,12 @@ conda list
 
 ### 001 Install common packages:
 
-`conda install numpy pandas matplotlib`
-`conda install jupyter notebook`
-`conda install numpy=1.10`
+```
+conda install numpy pandas matplotlib
+conda install jupyter notebook
+
+conda install numpy=1.10
+```
 
 ### 002 Uninstall:
 
@@ -67,6 +70,8 @@ conda upgrade --all
 
 ```shell
 conda config --prepend channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --prepend channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+
 ```
 
 ```shell
