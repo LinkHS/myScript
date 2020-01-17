@@ -76,12 +76,26 @@ markdown形式
 ```
 
 ---
-## matplotlib/opencv 显示
+## Matplotlib
+### - matplotlib/opencv 显示
 ```
 %matplotlib qt # for cv2.imshow()
 
 %matplotlib inline # for pyplot.show()
 ```
+
+### - 在不同cell中对同一个plot操作
+
+```python
+# Cell 1
+fig, ax = plt.subplots()
+
+# Cell 2
+ax.plot(x, y)
+fig # show
+```
+
+
 
 ---
 ## jupyter notebook 的27个小技巧
